@@ -1,0 +1,15 @@
+.odd-numbered {
+    background-color: hsl(0, 60%, 62%, 60%);
+    font: Verdana, "DejaVu Sans", sans-serif;
+}
+#second{
+    color: rgb(0, 0, 255);
+    font-size: 36px;
+}
+.medium-size{
+    font-size: 24px;
+}
+#fourth{
+    background-color: #96eb96;
+    font-weight: bold;
+}
