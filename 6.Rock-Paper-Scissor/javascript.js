@@ -1,13 +1,7 @@
+let arr = ['ROCK', 'PAPER', 'SCISSOR']
 function computerPlay() {
-    let rnd = Math.ceil(Math.random() * 3);
-    switch (rnd) {
-        case 1:
-            return 'ROCK';
-        case 2:
-            return 'PAPER';
-        case 3:
-            return 'SCISSOR';
-    }
+    let rnd = Math.floor(Math.random() * 3);
+    return arr[rnd];
 }
 
 function playRound(computerSelection, playerSelection) {
