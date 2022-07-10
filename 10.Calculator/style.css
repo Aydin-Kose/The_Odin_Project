@@ -1,0 +1,94 @@
+
+body {
+    height: 100vh;
+    background-color: #2C2C2C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.border{
+    border: 2px solid black;
+}
+
+.main{
+    margin: 2rem 8rem;
+    flex-grow: 1;
+    min-width: 300px;
+    max-width: 550px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    color: #F7F7F7;
+}
+
+.screen{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: #252525;
+}
+
+.screen .history{
+    flex-grow: 1;
+    border-bottom: 0px;
+}
+
+.history .item{
+    display: flex;
+    justify-content: space-between;
+    outline: 1px solid black;
+    font-size: 1rem;
+    padding: 1rem .5rem;
+}
+
+.screen .current{
+    padding: .5rem;
+    height: 4rem;
+    font-size: 2rem;
+    background-color: #252525;
+    color: #F7F7F7;
+    text-align: right;
+}
+
+.screen .current:focus-visible{
+    outline: none;
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: .5rem;
+}
+
+.buttons :nth-child(1){
+    background-color: #991121;
+}
+
+.buttons :nth-child(8){
+    grid-row: span 2;
+}
+
+.buttons :nth-child(15){
+    grid-row: span 2;
+    background-color: #0C6D1A;
+}
+
+.buttons :nth-child(16){
+    grid-column: span 2;
+}
+
+.key{
+    padding: .5rem 1rem;
+    color: #F7F7F7;
+    background-color: #2C2C2C;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 1.5rem;
+}
+
+.key:active{
+    background-color: #151515;
+}
