@@ -92,3 +92,9 @@ body {
 .key:active{
     background-color: #151515;
 }
+
+.error{
+    padding-right: 5px;
+    color: red;
+    align-self: flex-end;
+}
