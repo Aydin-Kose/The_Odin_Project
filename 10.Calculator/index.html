@@ -17,32 +17,32 @@
         <div class="screen">
             <div class="history border">
                 <div class="item">
-                    <span>5*3+2</span>
+                    <!-- <span>5*3+2</span>
                     <span>=</span>
-                    <span>17</span>
+                    <span>17</span> -->
                 </div>
             </div>
-            <input id="currentTextBox" type="text" class="current border">
+            <input id="currentTextBox" type="text" class="current border" disabled>
             <div class="error"></div>
         </div>
         <div class="buttons">
-            <button class="key material-symbols-outlined">backspace</button>
-            <button class="key">/</button>
-            <button class="key">*</button>
-            <button class="key">-</button>
-            <button class="key">7</button>
-            <button class="key">8</button>
-            <button class="key">9</button>
-            <button class="key">+</button>
-            <button class="key">4</button>
-            <button class="key">5</button>
-            <button class="key">6</button>
-            <button class="key">3</button>
-            <button class="key">2</button>
-            <button class="key">1</button>
-            <button class="key">=</button>
-            <button class="key">0</button>
-            <button class="key">,</button>
+            <button data-key="Backspace" onclick="clearOperation()" class="key material-symbols-outlined">backspace</button>
+            <button data-key="/" class="key operator">/</button>
+            <button data-key="*" class="key operator">*</button>
+            <button data-key="-" class="key operator">-</button>
+            <button data-key="7" class="key number">7</button>
+            <button data-key="8" class="key number">8</button>
+            <button data-key="9" class="key number">9</button>
+            <button data-key="+" class="key operator">+</button>
+            <button data-key="4" class="key number">4</button>
+            <button data-key="5" class="key number">5</button>
+            <button data-key="6" class="key number">6</button>
+            <button data-key="3" class="key number">3</button>
+            <button data-key="2" class="key number">2</button>
+            <button data-key="1" class="key number">1</button>
+            <button data-key="Enter" onclick="getResult()" class="key">=</button>
+            <button data-key="0" class="key number">0</button>
+            <button data-key="," class="key operator">,</button>
         </div>
     </div>
 </body>
