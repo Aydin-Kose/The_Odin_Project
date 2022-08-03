@@ -20,10 +20,28 @@ fieldset > div {
   flex-flow: row wrap;
 }
 
+select{
+  appearance: none;
+}
+
+.select-wrapper{
+  position: relative;
+  width: 100%;
+}
+
+.select-wrapper::after {
+  content: "▼";
+  font-size: 1rem;
+  top: 6px;
+  right: 10px;
+  position: absolute;
+}
+
 button,
 label,
 select,
-input {
+input[type="text"],
+input[type="email"] {
   display: block;
   font-family: inherit;
   font-size: 100%;
@@ -33,13 +51,64 @@ input {
   padding: 5px;
   height: 30px;
 }
+input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+input[type="radio"]+label{
+  display:inline;
+}
 
-input, select{
+input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  border: 2px solid gray;
+  /* Adjusts the position of the checkboxes on the text baseline */
+  vertical-align: -4px;
+  outline: none;
+}
+
+input[type="radio"]::before {
+  display: block;
+  content: " ";
+  width: 10px;
+  height: 10px;
+  border-radius: 6px;
+  background-color: red;
+  font-size: 1.2em;
+  transform: translate(3px, 3px) scale(0);
+  transform-origin: center;
+  transition: all 0.3s ease-in;
+}
+
+input[type="radio"]:checked::before {
+  transform: translate(3px, 3px) scale(1);
+  transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
+}
+
+input ~ span {
+  position: relative;
+}
+
+input:default ~ span::after {
+  font-size: 0.7rem;
+  position: absolute;
+  content: "Default";
+  color: white;
+  background-color: black;
+  padding: 5px 10px;
+  right: -65px;
+  top: -3px;
+}
+
+input[type="text"],
+input[type="email"], select{
   box-shadow: inset 1px 1px 3px #ccc;
   border-radius: 5px;
 }
 
-input:hover, input:focus, select:hover, select:focus{
+input:hover, input:focus{
   background-color: #eee;
 }
 

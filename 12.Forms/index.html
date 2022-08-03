@@ -27,11 +27,33 @@
       </div>
       <div>
         <label for="gender">Gender</label>
-        <select type="text" name="gender" id="gender" list="genderList">
-          <option value=""></option>
-          <option value="Male">Male</option>
-          <option value="Female">Female</option>
-        </select>
+        <div class="select-wrapper">
+          <select type="text" name="gender" id="gender" list="genderList">
+            <option value=""></option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <fieldset>
+          <legend>Choose Your Side</legend>
+          <p>
+            <input type="radio" name="pokemon" id="charmender" value="charmender">
+            <label for="pokemon">Charmender</label>
+            <span></span>
+          </p>
+           <p>
+            <input type="radio" name="pokemon" id="squirtle" value="squirtle">
+            <label for="pokemon">Squirtle</label>
+            <span></span>
+           </p> 
+            <p>
+              <input type="radio" name="pokemon" id="bulbasaur" value="bulbasaur">
+              <label for="pokemon">Bulbasaur</label>
+              <span></span>
+            </p>
+        </fieldset>
       </div>
       <div><button type="submit">Submit</button></div>
     </fieldset>
