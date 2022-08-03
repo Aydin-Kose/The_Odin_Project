@@ -1,28 +1,40 @@
 <!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <title>Form Page</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <form action="/my-handling-form-page" method="post">
-      <h1>to: Mozilla</h1>
-      <div id="from">
-        <label for="name">from:</label>
-        <input type="text" id="name" name="userName" />
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <form action="">
+    <fieldset>
+      <legend>Feedback Form</legend>
+      <div>
+        <label for="fname">First Name:</label>
+        <input type="text" name="fname" id="fname" required>
+        <span></span>
       </div>
-      <div id="reply">
-        <label for="mail">reply:</label>
-        <input type="email" name="mail" id="mail" />
+      <div>
+        <label for="lname">Last Name:</label>
+        <input type="text" name="lname" id="lname" required>
+        <span></span>
       </div>
-      <div id="message">
-        <label for="msg">Your message:</label>
-        <textarea name="userMessage" id="msg"></textarea>
+      <div>
+        <label for="email">Email address(include if you want a response):</label>
+        <input type="email" id="email" name="email">
       </div>
-      <div class="button">
-        <button type="submit">Send your message</button>
+      <div>
+        <label for="gender">Gender</label>
+        <select type="text" name="gender" id="gender" list="genderList">
+          <option value=""></option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
       </div>
-    </form>
-  </body>
+      <div><button type="submit">Submit</button></div>
+    </fieldset>
+  </form>
+</body>
 </html>
