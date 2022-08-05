@@ -1,0 +1,92 @@
+@font-face {
+  font-family: Norse;
+  font-weight: bold;
+  src: url("./Norse-Bold.otf");
+}
+
+:root{
+    --button-color: #596D48;
+    --light-border: #E5E7EB;
+    font-family: sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.picture {
+  position: relative;
+  width: max(40vw, 500px);
+  height: 100vh;
+  background: no-repeat url(./images/photo-1585202900225-6d3ac20a6962.avif);
+  background-size: cover;
+  flex-shrink: 0;
+}
+
+.picture .card {
+  position: absolute;
+  width: 100%;
+  padding: 2rem;
+  background: black;
+  opacity: 0.7;
+  top: 20%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .logo {
+  background: no-repeat url("./images/odin-lined.png");
+  background-size: 75px 100px;
+  background-position: center;
+  width: 75px;
+  height: 100px;
+}
+
+.card .text {
+  font-family: Norse;
+  float: left;
+  color: white;
+  font-size: 135px;
+  margin: 0;
+}
+
+.right{
+    background-color: #F9FAFB;
+}
+
+form{
+    background-color: white;
+    border: 2px solid --light-border;
+    padding: 2rem;
+}
+
+form h2{
+    font-size: 1.5rem;
+}
+
+form .row{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 40px;
+}
+
+form .row label{
+    width: 200px;
+    padding-bottom: 20px;
+}
+
+form .row input{
+    border: 2px solid --light-border;
+    width: 200px;
+}
