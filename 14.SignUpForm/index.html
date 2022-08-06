@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Odin Sign Up Page</title>
 </head>
+
 <body>
     <div class="main">
         <div class="picture">
@@ -14,41 +16,47 @@
                 <div class="logo"></div>
                 <p class="text">ODIN</p>
             </div>
+            <h6>Photo by Halie West on Unsplash</h6>
         </div>
         <div class="right">
-            <h1>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started.</h1>
-            <h1>You <em>know</em> you want to.</h1>
+            <div class="header">
+                <h1>This is not a real online service! You know you need something like this in your life to help you
+                    realize your deepest dreams. Sign up now to get started.</h1>
+                <h1>You <em>know</em> you want to.</h1>
+            </div>
             <form action="" method="get">
-                <h2>Let's do this!</h1>
-                    <div class="row">
-                        <label for="fName">First Name
-                            <input id="fName" name="firstName" type="text" required>
-                        </label>
-                        <label for="lName">Last Name
-                            <input id="lName" name="lastName" type="text" required>
-                        </label>
-                        
-                    </div>
-                    <div class="row">
-                        <label for="email">Email
-                            <input id="email" name="email" type="email" required>
-                        </label>
-                        <label for="tel">Phone Number
-                            <input type="tel" name="phoneNumber" id="tel" required>
-                        </label>
-                    </div>
-                    <div class="row">
-                        <label for="password">Password
-                            <input type="password" name="password" id="password">
-                        </label>
-                        <label for="password">Confirm Password
-                            <input type="password" name="password" id="password">
-                        </label>
-                    </div>
-                    <button type="submit">Create Account</button>
+                <section>
+                    <h2>Let's do this!</h1>
+                        <div class="row">
+                            <label for="fName">First Name
+                                <input id="fName" name="firstName" type="text" required>
+                            </label>
+                            <label for="lName">Last Name
+                                <input id="lName" name="lastName" type="text" required>
+                            </label>
+                        </div>
+                        <div class="row">
+                            <label for="email">Email
+                                <input id="email" name="email" type="email" required>
+                            </label>
+                            <label for="tel">Phone Number
+                                <input type="tel" name="phoneNumber" id="tel" required>
+                            </label>
+                        </div>
+                        <div class="row">
+                            <label for="password">Password
+                                <input type="password" name="password" id="password">
+                            </label>
+                            <label for="cpassword">Confirm Password
+                                <input type="password" name="password" id="cpassword">
+                            </label>
+                        </div>
+                </section>
+                <button type="submit">Create Account</button>
             </form>
             <p>You already have an account? <a href="">Log in</a></p>
         </div>
     </div>
 </body>
+
 </html>
