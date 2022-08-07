@@ -125,8 +125,25 @@ form .row input{
     border: 2px solid var(--light-border);
     box-shadow: 1px 1px 5px #aaaaaa77;
     font-size: 100%;
+    outline: none;
     padding: 5px;
     background-color: white;
+}
+
+input[type="password"].error{
+  border: 2px solid red;
+  background: #FFCCCB;
+}
+
+input[type="password"].error+span::after{
+  content: "*Passwords do not match";
+  color: red;
+  font-size: 80%;
+}
+
+form .row input:focus{
+  border: 2px solid blue;
+  background-color: lightblue;
 }
 
 form+p{
