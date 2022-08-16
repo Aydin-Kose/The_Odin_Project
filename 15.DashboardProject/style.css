@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap');
+
+:root {
+    --blue: #1992D4;
+    --gray: #E2E8F0;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+    box-sizing: border-box;
+    border: none;
+}
+
+.header {
+    padding: 20px 40px;
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    grid-template-rows: 4rem 8rem;
+}
+
+[for="searchbar"] {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.header .icon {
+    height: 2rem;
+    width: auto;
+}
+
+.header input[type="search"] {
+    height: 2.5rem;
+    background-color: var(--gray);
+    border-radius: 25px;
+    flex-grow: 1;
+    padding: 0px 25px;
+}
+
+.header .profile {
+    display: grid;
+    grid-template-columns: 2.5rem 4rem max-content;
+    align-items: center;
+    justify-content: end;
+    gap: 20px;
+}
+
+.avatar {
+    border-radius: 50%;
+}
+
+.profile .avatar {
+    height: 4rem;
+}
+
+.profile span {
+    font-weight: bold;
+    font-size: 1.3rem;
+    justify-self: center;
+}
+
+.big-profile {
+    display: grid;
+    grid-template-columns: 5rem 1fr;
+    align-items: center;
+    gap: 20px;
+}
+
+.big-profile .avatar {
+    height: 5rem;
+}
+
+.big-profile .greetings span {
+    display: block;
+}
+
+.big-profile .greetings>* {
+    font-weight: bold;
+    line-height: 1.em;
+}
+
+.big-profile .greetings :nth-child(2) {
+    font-size: 2rem;
+}
+
+.header .buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.primary-button {
+    background-color: var(--blue);
+    font-weight: bold;
+    color: white;
+    padding: 1em 2em;
+    border-radius: 25px;
+}
