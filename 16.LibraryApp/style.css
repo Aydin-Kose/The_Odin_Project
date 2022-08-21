@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font: inherit;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./img/alfons-morales-YLSwjSy7stw-unsplash.jpg);
+    background-size: cover;
+}
+
+header {
+    height: 100px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+}
+
+header>.hero {
+    margin-left: 2rem;
+    color: white;
+
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.library {
+    margin: 16px;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fill, 250px);
+    grid-auto-rows: 1fr;
+}
+
+.book-card {
+    padding: 1rem;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5));
+    color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: inset 25px 0 10px -20px darkred;
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    justify-content: space-between;
+}
+
+.book-card>.title {
+    font-size: 1.1rem;
+    overflow-wrap: normal;
+    font-weight: bold;
+    margin-bottom: .2rem;
+}
+
+.book-card>span{
+    padding: .25rem .5rem;
+}
+
+button{
+    font-style: inherit;
+    border: none;
+    background-color: transparent;
+}
+
+.new-book {
+    align-self: center;
+    margin: auto;
+    
+    color: white;
+    padding: .2rem .2rem;
+    width: max-content;
+    text-align: center;
+    border: 2px solid darkred;
+    border-radius: 5px;
+}
+
+.new-book::before{
+    content: '+ ';
+    font-size: 1rem;
+    margin: auto;
+    text-align: center;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.new-book-form{
+    display: grid;
+    grid-template-columns: 1fr 140px;
+    gap: 8px;
+    font-size: 80%;
+}
+
+.new-book-form>input[type="checkbox"]{
+    justify-self: start;
+}
+
+.read, .not-read{
+    margin-top: 5px;
+    height: 1.2rem;
+}
+
+.read::before{
+    content: 'Read';
+
+    background-color: darkgreen;
+    padding: .25rem .5rem;
+    border-radius: 5px;
+}
+
+.not-read::before{
+    content: 'Not Read';
+    background-color: darkred;
+    padding: .2rem .2rem;
+    border-radius: 5px;
+}
+
+.book-card>.buttons{
+    margin-top: 8px;
+    align-self: end;
+}
+
+.buttons button{
+    background-color: darkred;
+    color: white;
+    width: 80px;
+    padding: .25rem 0px;
+    border-radius: 5px;
+}
