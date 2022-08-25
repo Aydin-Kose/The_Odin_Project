@@ -25,7 +25,7 @@ function visualizeBook(book) {
         <div>
         <div class="element">${book.author}</div>
         <div class="element">${book.pages}</div>
-        <button class="${book.read ? "read" : "not-read"}"></button>
+        <button class="${book.read ? "read" : "not-read"}" onclick="onClickDelete()></button>
         </div>
         <div class="buttons">
         <button type="button" class="delete-book" onclick="onClickDelete(${book.id})">Delete</button>
