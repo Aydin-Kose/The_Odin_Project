@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+
+header>h1 {
+    font-size: 3rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.selection {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.selection>button {
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 5px;
+    padding: 2px 32px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 6rem);
+    grid-template-rows: repeat(3, 6rem);
+    gap: .2rem;
+    background-color: black;
+}
+
+.board>.cell {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+}
