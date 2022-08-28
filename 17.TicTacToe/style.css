@@ -27,6 +27,14 @@ header>h1 {
 .main {
     display: flex;
     justify-content: center;
+    position: relative;
+}
+
+.result{
+    position: absolute;
+    align-self: center;
+    font-size: 4rem;
+    z-index: 999;
 }
 
 .board {
@@ -35,6 +43,10 @@ header>h1 {
     grid-template-rows: repeat(3, 6rem);
     gap: .4rem;
     background-color: black;
+}
+
+.board.endGame {
+    filter: blur(5px);
 }
 
 .board>.cell {

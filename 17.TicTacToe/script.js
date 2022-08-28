@@ -39,10 +39,24 @@ const GameBoard = () => {
                 board[0][2] === board[1][1] && board[1][1] === board[2][0])) {
             return true;
         }
+        else if (board.every(row => row.every(cell => cell !== ''))) {
+            return 'Tie';
+        }
         return false;
     };
-    const endGame = function () {
-
+    const endGame = function (player, result) {
+        const boardDiv = document.querySelector('div.board');
+        const resultDiv = document.querySelector('div.result');
+        boardDiv.classList.add('endGame');
+        resultDiv.removeAttribute('hidden');
+        if (result === 'Tie') {
+            document.querySelector('p.tie').removeAttribute('hidden');
+        }
+        else {
+            let el = document.querySelector('p.winner')
+            el.removeAttribute('hidden')
+            el.textContent += player.Value;
+        }
     }
     const play = function (cell, player, pcPlayer) {
         let row = cell.dataset.row;
@@ -50,11 +64,11 @@ const GameBoard = () => {
         if (board[row][column] === '') {
             board[row][column] = player.Value;
             cell.textContent = player.Value;
-            if (checkWin(row, column)) {
-                endGame();
+            let result = checkWin(row, column);
+            if (result) {
+                endGame(player, result);
             }
             else if (pcPlayer !== undefined) {
-                debugger;
                 play(pcPlayer.makeMove(board), pcPlayer);
             }
         }
