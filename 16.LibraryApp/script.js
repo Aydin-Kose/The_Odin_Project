@@ -1,13 +1,14 @@
 let myLibrary = [];
 const libraryDiv = document.querySelector('div.library');
 
-function Book(title, author, pages, read) {
-    this.id = myLibrary.length+1;
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-
+class Book {
+    constructor(title, author, pages, read) {
+        this.id = myLibrary.length + 1;
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
     info = function () {
         console.log(`${this.title} by ${author}, ${this.pages} pages, ${this.read ? "read" : "not read yet"}`);
     }
@@ -51,7 +52,7 @@ function onClickAddNew() {
     }
 }
 
-function onClickDelete(id){
+function onClickDelete(id) {
     debugger;
     myLibrary = myLibrary.filter(book => book.id !== id);
     document.getElementById(`book${id}`).remove();
