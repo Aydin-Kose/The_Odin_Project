@@ -27,6 +27,23 @@ const PcPlayer = (difficulty) => {
 
 const GameBoard = () => {
     const board = [['', '', ''], ['', '', ''], ['', '', '']];
+    const checkWin = (row, column) => {
+        if (board[row][0] === board[row][1] && board[row][0] === board[row][2]) {
+            return true;
+        }
+        else if (board[0][column] === board[1][column] && board[0][column] === board[2][column]) {
+            return true;
+        }
+        else if (board[1][1] !== '' &&
+            ((board[0][0] === board[1][1] && board[1][1] === board[2][2]) ||
+                board[0][2] === board[1][1] && board[1][1] === board[2][0])) {
+            return true;
+        }
+        else if (board.every(row => row.every(cell => cell !== ''))) {
+            return 'Tie';
+        }
+        return false;
+    };
     const endGame = function (player, result) {
         const boardDiv = document.querySelector('div.board');
         const resultDiv = document.querySelector('div.result');
@@ -56,23 +73,7 @@ const GameBoard = () => {
             }
         }
     };
-    const checkWin = (row, column) => {
-        if (board[row][0] === board[row][1] && board[row][0] === board[row][2]) {
-            return true;
-        }
-        else if (board[0][column] === board[1][column] && board[0][column] === board[2][column]) {
-            return true;
-        }
-        else if (board[1][1] !== '' &&
-            ((board[0][0] === board[1][1] && board[1][1] === board[2][2]) ||
-                board[0][2] === board[1][1] && board[1][1] === board[2][0])) {
-            return true;
-        }
-        else if (board.every(row => row.every(cell => cell !== ''))) {
-            return 'Tie';
-        }
-        return false;
-    };
+
     return { board, play };
 };
 
