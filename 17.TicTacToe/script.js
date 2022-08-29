@@ -87,3 +87,5 @@ const Game = (() => {
     }
     return { gameBoard, player };
 })();
+
+let a = 'a';
