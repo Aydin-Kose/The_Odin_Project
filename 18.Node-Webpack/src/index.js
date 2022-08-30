@@ -5,6 +5,8 @@ import webpack from './webpack.svg'
 import Data from './data.xml';
 import Notes from './data.csv';
 
+import printFunc from './print'
+
 function component() {
     const element = document.createElement('div');
 
@@ -23,3 +25,5 @@ document.body.appendChild(component());
 
 console.log(Data);
 console.log(Notes);
+
+printFunc();
