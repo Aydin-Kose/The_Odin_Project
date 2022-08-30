@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'MyRoboto';
+    src: url('./QwitcherGrypen-Regular.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+.hello{
+    color: red;
+    font-family: 'MyRoboto';
+    font-size: 6rem;
+    background: url('./webpack.svg');
+}
