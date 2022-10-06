@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Mr+De+Haviland&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mr+De+Haviland&family=Poppins:wght@500&display=swap');
 
 * {
     margin: 0;
@@ -81,12 +81,91 @@ button {
     display: flex;
 }
 
-.heading {
+.main-container {
     align-self: center;
     margin-left: auto;
-    text-align: right;
-    font-size: 6rem;
-    width: max(50% 400px);
-    line-height: 7rem;
     padding-right: 10%;
+}
+
+.heading {
+    font-size: 4.5rem;
+    line-height: 5rem;
+    width: max-content;
+    background: linear-gradient(to bottom right, rgba(0, 0, 0) -10%, rgba(255, 255, 255, 1));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.primary-button {
+    margin: 1rem 0;
+    padding: 10px 25px;
+    border: solid 1px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+/* Menu */
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100%;
+    gap: 40px;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.card {
+    display: flex;
+    border: solid 1px white;
+    margin: 0 10%;
+}
+
+.appetizer {
+    background: url('./img/menu/spicy-shrimp-carousel.png') center no-repeat;
+}
+
+.salad {
+    background: url('./img/menu/caesar-salad.png') center no-repeat;
+}
+
+.steak {
+    background: url('./img/menu/rib-eye_steak_with_61963_16x9.jpg') center no-repeat;
+}
+
+.cheesecake {
+    background: url('./img/menu/cheesecake-carousel.png') center no-repeat;
+}
+
+.card-image {
+    background-size: cover;
+    width: 40%;
+    height: 100%;
+    align-self:flex-start;
+}
+
+.card:nth-of-type(even)>.card-image {
+    order: 3;
+}
+
+.card-description{
+    flex-grow: 1;
+    text-align: center;
+    padding: 40px;
+}
+
+.card h2{
+    font-family: 'Mr De Haviland', cursive;
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--logo-color)
+}
+
+/* Contact */
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 10%;
+    gap: 20px;
 }
